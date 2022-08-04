@@ -1,5 +1,5 @@
-const App = () => {
-  return <h1>Light-It Challenge</h1>;
-};
+import AppRouter from './routers/AppRouter';
+
+const App = () => <AppRouter />;
 
 export default App;

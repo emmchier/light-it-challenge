@@ -22,7 +22,7 @@ const Box = ({
 );
 
 Box.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   display: PropTypes.string,
   alignItems: PropTypes.string,
   justifyContent: PropTypes.string,

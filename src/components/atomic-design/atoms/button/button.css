@@ -1,0 +1,13 @@
+@tailwind components;
+@layer components {
+  /* Button */
+  .button {
+    @apply rounded-main hover:bg-secondary-dark transition ease-in-out duration-300 py-3 px-8 flex items-center justify-between;
+    color: theme(colors.text.primary);
+    background-color: theme(colors.white);
+  }
+
+  .button.button__text {
+    @apply bg-transparent p-0 hover:text-black;
+  }
+}

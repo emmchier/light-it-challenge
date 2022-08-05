@@ -18,8 +18,10 @@ const Button = ({
         return 'button';
       case 'text':
         return 'button__text';
+      case 'fullWidth':
+        return 'button__fullWidth';
       default:
-        break;
+        return 'button';
     }
   };
 

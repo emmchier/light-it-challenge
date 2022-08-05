@@ -10,4 +10,8 @@
   .button.button__text {
     @apply bg-transparent p-0 hover:text-black;
   }
+
+  .button.button__fullWidth {
+    @apply w-full;
+  }
 }

@@ -1,6 +1,6 @@
-export const AddIcon = ({ color = '#000000', hover }) => (
+export const AddIcon = ({ color = '#000000', classes }) => (
   <svg
-    className={`icon hover: ${hover}`}
+    className={classes}
     width="19"
     height="19"
     viewBox="0 0 19 19"
@@ -12,9 +12,9 @@ export const AddIcon = ({ color = '#000000', hover }) => (
   </svg>
 );
 
-export const AberturasIcon = ({ color = '#000000', hover }) => (
+export const AberturasIcon = ({ color = '#000000', classes }) => (
   <svg
-    className={`icon hover: ${hover}`}
+    className={classes}
     width="32"
     height="30"
     viewBox="0 0 32 30"
@@ -45,9 +45,9 @@ export const AberturasIcon = ({ color = '#000000', hover }) => (
   </svg>
 );
 
-export const ArrowIcon = ({ color = '#000000', hover }) => (
+export const ArrowIcon = ({ color = '#000000', classes }) => (
   <svg
-    className={`icon hover: ${hover}`}
+    className={classes}
     width="23"
     height="20"
     viewBox="0 0 23 20"
@@ -69,9 +69,9 @@ export const ArrowIcon = ({ color = '#000000', hover }) => (
   </svg>
 );
 
-export const ChevronIcon = ({ color = '#000000', hover }) => (
+export const ChevronIcon = ({ color = '#000000', classes }) => (
   <svg
-    className={`icon hover: ${hover}`}
+    className={classes}
     width="12"
     height="19"
     viewBox="0 0 12 19"
@@ -95,9 +95,9 @@ export const ChevronIcon = ({ color = '#000000', hover }) => (
   </svg>
 );
 
-export const EquipamientoIcon = ({ color = '#000000', hover }) => (
+export const EquipamientoIcon = ({ color = '#000000', classes }) => (
   <svg
-    className={`icon hover: ${hover}`}
+    className={classes}
     width="19"
     height="26"
     viewBox="0 0 19 26"
@@ -122,9 +122,9 @@ export const EquipamientoIcon = ({ color = '#000000', hover }) => (
   </svg>
 );
 
-export const SustractIcon = ({ color = '#000000', hover }) => (
+export const SustractIcon = ({ color = '#000000', classes }) => (
   <svg
-    className={`icon hover: ${hover}`}
+    className={classes}
     width="16"
     height="3"
     viewBox="0 0 16 3"
@@ -135,9 +135,9 @@ export const SustractIcon = ({ color = '#000000', hover }) => (
   </svg>
 );
 
-export const TerminacionesIcon = ({ color = '#000000', hover }) => (
+export const TerminacionesIcon = ({ color = '#000000', classes }) => (
   <svg
-    className={`icon hover: ${hover}`}
+    className={classes}
     width="26"
     height="26"
     viewBox="0 0 26 26"

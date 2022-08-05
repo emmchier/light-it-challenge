@@ -10,23 +10,23 @@ import {
   TerminacionesIcon,
 } from '../../../ui/svg';
 
-const Icon = ({ icon = '', color, hover }) => {
+const Icon = ({ icon = '', color }) => {
   const getIcon = () => {
     switch (icon) {
       case 'add':
-        return <AddIcon color={color} hover={hover} />;
+        return <AddIcon color={color} />;
       case 'aberturas':
-        return <AberturasIcon color={color} hover={hover} />;
+        return <AberturasIcon color={color} />;
       case 'arrow':
-        return <ArrowIcon color={color} hover={hover} />;
+        return <ArrowIcon color={color} />;
       case 'chevron':
-        return <ChevronIcon color={color} hover={hover} />;
+        return <ChevronIcon color={color} />;
       case 'equipamiento':
-        return <EquipamientoIcon color={color} hover={hover} />;
+        return <EquipamientoIcon color={color} />;
       case 'sustract':
-        return <SustractIcon color={color} hover={hover} />;
+        return <SustractIcon color={color} />;
       case 'terminaciones':
-        return <TerminacionesIcon color={color} hover={hover} />;
+        return <TerminacionesIcon color={color} />;
       default:
         break;
     }

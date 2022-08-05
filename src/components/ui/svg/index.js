@@ -1,6 +1,7 @@
-export const AddIcon = ({ color = '#000000', classes }) => (
+export const AddIcon = ({ color = '#000000', rotate, ariaLabel }) => (
   <svg
-    className={classes}
+    className={`${rotate}`}
+    aria-label={ariaLabel}
     width="19"
     height="19"
     viewBox="0 0 19 19"
@@ -12,9 +13,10 @@ export const AddIcon = ({ color = '#000000', classes }) => (
   </svg>
 );
 
-export const AberturasIcon = ({ color = '#000000', classes }) => (
+export const AberturasIcon = ({ color = '#000000', rotate, ariaLabel }) => (
   <svg
-    className={classes}
+    className={`${rotate}`}
+    aria-label={ariaLabel}
     width="32"
     height="30"
     viewBox="0 0 32 30"
@@ -45,9 +47,10 @@ export const AberturasIcon = ({ color = '#000000', classes }) => (
   </svg>
 );
 
-export const ArrowIcon = ({ color = '#000000', classes }) => (
+export const ArrowIcon = ({ color = '#000000', rotate, ariaLabel }) => (
   <svg
-    className={classes}
+    className={`${rotate}`}
+    aria-label={ariaLabel}
     width="23"
     height="20"
     viewBox="0 0 23 20"
@@ -69,9 +72,10 @@ export const ArrowIcon = ({ color = '#000000', classes }) => (
   </svg>
 );
 
-export const ChevronIcon = ({ color = '#000000', classes }) => (
+export const ChevronIcon = ({ color = '#000000', rotate, ariaLabel }) => (
   <svg
-    className={classes}
+    className={`${rotate}`}
+    aria-label={ariaLabel}
     width="12"
     height="19"
     viewBox="0 0 12 19"
@@ -95,9 +99,10 @@ export const ChevronIcon = ({ color = '#000000', classes }) => (
   </svg>
 );
 
-export const EquipamientoIcon = ({ color = '#000000', classes }) => (
+export const EquipamientoIcon = ({ color = '#000000', rotate, ariaLabel }) => (
   <svg
-    className={classes}
+    className={`${rotate}`}
+    aria-label={ariaLabel}
     width="19"
     height="26"
     viewBox="0 0 19 26"
@@ -122,9 +127,10 @@ export const EquipamientoIcon = ({ color = '#000000', classes }) => (
   </svg>
 );
 
-export const SustractIcon = ({ color = '#000000', classes }) => (
+export const SustractIcon = ({ color = '#000000', rotate, ariaLabel }) => (
   <svg
-    className={classes}
+    className={`${rotate}`}
+    aria-label={ariaLabel}
     width="16"
     height="3"
     viewBox="0 0 16 3"
@@ -135,9 +141,10 @@ export const SustractIcon = ({ color = '#000000', classes }) => (
   </svg>
 );
 
-export const TerminacionesIcon = ({ color = '#000000', classes }) => (
+export const TerminacionesIcon = ({ color = '#000000', rotate, ariaLabel }) => (
   <svg
-    className={classes}
+    className={`${rotate}`}
+    aria-label={ariaLabel}
     width="26"
     height="26"
     viewBox="0 0 26 26"

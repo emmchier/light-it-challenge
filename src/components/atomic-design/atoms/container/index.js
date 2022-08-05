@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Container = ({ children, container }) => (
-  <div className={`main-container ${container}`}>{children}</div>
+const Container = ({ children, size }) => (
+  <div className={`main-container ${size}`}>{children}</div>
 );
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,
-  container: PropTypes.string,
+  size: PropTypes.string,
 };
 
 Container.defaultProps = {
-  container: 'md',
+  size: 'md',
 };
 
 export default Container;

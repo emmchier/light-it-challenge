@@ -2,4 +2,6 @@
 @import './utilities.css';
 @import '../components/atomic-design/atoms/button/button.css';
 @import '../components/atomic-design/atoms/heading/heading.css';
+@import '../components/atomic-design/atoms/text/text.css';
 @import '../components/atomic-design/atoms/container/container.css';
+@import '../components/atomic-design/molecules/navbar/navbar.css';

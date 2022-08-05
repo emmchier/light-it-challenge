@@ -1,6 +1,5 @@
 @tailwind components;
 @layer components {
-  /* Button */
   .button {
     @apply rounded-main hover:bg-secondary-dark transition ease-in-out duration-300 py-3 px-8 flex items-center justify-between md:text-smX lg:text-sm;
     color: theme(colors.text.primary);

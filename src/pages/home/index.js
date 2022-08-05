@@ -5,6 +5,7 @@ import Button from '../../components/atomic-design/atoms/button';
 import Heading from '../../components/atomic-design/atoms/heading';
 import Icon from '../../components/atomic-design/atoms/icon';
 import Container from '../../components/atomic-design/atoms/container';
+import Text from '../../components/atomic-design/atoms/text';
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <Heading variant="h4">HomePage</Heading>
       <Heading variant="h5">HomePage</Heading>
       <Heading variant="h6">HomePage</Heading>
+      <Text>lorem mnabsjnasjkaklsjalkjslkajslkajslkjalksjalksj</Text>
       <Icon icon="arrow" />
       <Button onClick={() => console.log('on click!')} ariaLabel="tasting button">
         Fijar

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Button from '../../components/atomic-design/atoms/button';
 import Icon from '../../components/atomic-design/atoms/icon';
 
@@ -7,7 +8,9 @@ const HomePage = () => {
     <>
       <h1>HomePage</h1>
       <Icon icon="arrow" />
-      <Button variant="default">Fijar</Button>
+      <Button onClick={() => console.log('on click!')} ariaLabel="tasting button">
+        Fijar
+      </Button>
     </>
   );
 };

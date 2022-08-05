@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Icon from '../icon';
 
 const Button = ({
@@ -41,6 +43,24 @@ const Button = ({
       )}
     </button>
   );
+};
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+  type: PropTypes.string,
+  variant: PropTypes.string,
+  ariaLabel: PropTypes.string.isRequired,
+  iconLeft: PropTypes.bool,
+  iconRight: PropTypes.bool,
+};
+
+Button.defaultProps = {
+  type: 'button',
+  variant: 'default',
+  iconLeft: false,
+  iconRight: false,
+  onClick: () => {},
 };
 
 export default Button;

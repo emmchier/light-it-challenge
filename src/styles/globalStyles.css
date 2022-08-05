@@ -1,27 +1,29 @@
 @tailwind base;
 @layer base {
-  /* agrego los globalStyles acá */
   body,
   html {
     @apply m-0 p-0 overflow-hidden;
     background-color: theme(colors.secondary.main);
   }
+
   *,
   a {
     text-decoration: none;
     list-style: none;
   }
+
   ul {
     @apply p-0;
   }
+
   p,
   a {
     color: theme(colors.text.primary);
   }
 
-  /* @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
-      ::-webkit-scrollbar {
-        display: none;
-      }
-    } */
+  @media screen(sm) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }

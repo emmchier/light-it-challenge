@@ -1,6 +1,11 @@
 @tailwind components;
 @layer components {
   .navbar {
-    @apply w-full bg-primary-main flex items-center justify-between;
+    @apply w-full bg-primary-main;
+  }
+
+  .navbar img {
+    width: 100px;
+    @apply lg:w-auto py-5;
   }
 }

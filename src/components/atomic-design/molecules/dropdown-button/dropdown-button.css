@@ -1,0 +1,41 @@
+@tailwind components;
+@layer components {
+  .content {
+  }
+
+  .select-input {
+    @apply block lg:flex items-center justify-center cursor-pointer relative z-10;
+  }
+
+  .select-label {
+    @apply hidden;
+  }
+
+  .select {
+    @apply font-normal leading-3 rounded-md cursor-pointer overflow-hidden text-primary-main bg-white border-primary-main border-spacing-1 px-10 py-16 focus:text-primary-main focus:outline-none disabled:border-secondary-main disabled:border-spacing-1 disabled:text-secondary-dark disabled:bg-transparent md:p-2;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #252f3d 50%),
+      linear-gradient(135deg, blue 50%, transparent 50%),
+      linear-gradient(to right, #ffffff, #ffffff);
+    background-position: calc(100% - 20px) calc(1em + 5px), calc(100% - 15px) calc(1em + 5px),
+      100% 0;
+    background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+    background-repeat: no-repeat;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  .select-option {
+    @apply w-full text-primary-main;
+  }
+
+  .input-label {
+    @apply leading-3 font-semibold text-primary-main mr-3 hidden md:block;
+  }
+}

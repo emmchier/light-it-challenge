@@ -3,15 +3,7 @@ import PropTypes from 'prop-types';
 
 import Icon from '../icon';
 
-const Button = ({
-  children,
-  onClick,
-  type = 'button',
-  variant = 'default',
-  ariaLabel = '',
-  iconLeft = false,
-  iconRight = false,
-}) => {
+const Button = ({ children, onClick, type, variant, ariaLabel, iconLeft, iconRight, padding }) => {
   const getVariant = (variant) => {
     switch (variant) {
       case 'default':
@@ -28,7 +20,7 @@ const Button = ({
   return (
     <button
       onClick={onClick}
-      className={`button ${getVariant(variant)}`}
+      className={`button ${getVariant(variant)} ${padding}`}
       type={type}
       aria-label={ariaLabel}
     >
@@ -55,6 +47,7 @@ Button.propTypes = {
   ariaLabel: PropTypes.string.isRequired,
   iconLeft: PropTypes.bool,
   iconRight: PropTypes.bool,
+  padding: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -63,6 +56,7 @@ Button.defaultProps = {
   iconLeft: false,
   iconRight: false,
   onClick: () => {},
+  padding: 'py-3 px-8',
 };
 
 export default Button;

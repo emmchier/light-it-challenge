@@ -1,0 +1,7 @@
+@tailwind components;
+@layer components {
+  .sidebar {
+    @apply overflow-hidden bg-white flex items-center w-fit;
+    height: 100vh;
+  }
+}

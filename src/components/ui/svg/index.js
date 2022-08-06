@@ -40,7 +40,7 @@ export const AberturasIcon = ({ color = '#000000', rotate, ariaLabel }) => (
       width="19.5833"
       height="19.5833"
       stroke={color}
-      stroke-width="0.416667"
+      strokeWidth="0.416667"
     />
     <rect x="15" y="5" width="2" height="20" fill={color} />
     <rect x="6" y="16" width="2" height="20" transform="rotate(-90 6 16)" fill={color} />
@@ -111,8 +111,8 @@ export const EquipamientoIcon = ({ color = '#000000', rotate, ariaLabel }) => (
   >
     <rect x="9" y="12" width="1" height="12" fill={color} />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M4 24H15V26H16V24C16 23.4477 15.5523 23 15 23H4C3.44772 23 3 23.4477 3 24V26H4L4 24Z"
       fill={color}
     />
@@ -151,8 +151,8 @@ export const TerminacionesIcon = ({ color = '#000000', rotate, ariaLabel }) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect x="1" y="1" width="7" height="17" stroke={color} stroke-width="2" />
-    <rect x="18" y="8" width="7" height="17" stroke={color} stroke-width="2" />
+    <rect x="1" y="1" width="7" height="17" stroke={color} strokeWidth="2" />
+    <rect x="18" y="8" width="7" height="17" stroke={color} strokeWidth="2" />
     <rect
       x="8"
       y="8"
@@ -160,7 +160,7 @@ export const TerminacionesIcon = ({ color = '#000000', rotate, ariaLabel }) => (
       height="17"
       transform="rotate(-90 8 8)"
       stroke={color}
-      stroke-width="2"
+      strokeWidth="2"
     />
     <rect
       x="1"
@@ -169,7 +169,7 @@ export const TerminacionesIcon = ({ color = '#000000', rotate, ariaLabel }) => (
       height="17"
       transform="rotate(-90 1 25)"
       stroke={color}
-      stroke-width="2"
+      strokeWidth="2"
     />
   </svg>
 );

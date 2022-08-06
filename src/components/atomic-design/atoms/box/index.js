@@ -13,9 +13,10 @@ const Box = ({
   margin,
   padding,
   radius,
+  classes,
 }) => (
   <div
-    className={`${display} ${alignItems} ${justifyContent} ${flexDirection} ${background} ${width} ${height} ${margin} ${padding} ${radius}`}
+    className={`${display} ${alignItems} ${justifyContent} ${flexDirection} ${background} ${width} ${height} ${margin} ${padding} ${radius} ${classes}`}
   >
     {children}
   </div>
@@ -33,6 +34,7 @@ Box.propTypes = {
   margin: PropTypes.string,
   padding: PropTypes.string,
   radius: PropTypes.string,
+  classes: PropTypes.string,
 };
 
 Box.defaultProps = {
@@ -46,6 +48,7 @@ Box.defaultProps = {
   margin: 'm-0',
   padding: 'p-0',
   radius: 'rounded-none',
+  classes: '',
 };
 
 export default Box;

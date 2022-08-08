@@ -1,24 +1,36 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+
+import React, { useContext, useEffect, useState } from 'react';
+import { MainContext } from '../../../../../context';
 
 import Text from '../../../atoms/text';
 import Box from '../../../atoms/box';
 
-const SidebarItem = ({ icon, slug, onClick }) => {
-  const [isRounded, setIsRounded] = useState(false);
+const SidebarItem = ({ icon, slug, isActive }) => {
+  const { activeItem, setActiveItem, setShowMenu } = useContext(MainContext);
 
   const handleClick = () => {
-    setIsRounded(!isRounded);
-    onClick();
+    setShowMenu(true);
+    setActiveItem({ currentItem: slug, isSelected: true });
   };
 
   return (
     <li onClick={handleClick} className="sidebar-item">
-      <div className={`${isRounded === true ? 'bg-secondary-main' : 'bg-transparent'} z-10`}>
+      <div
+        className={`${
+          activeItem.currentItem === slug && activeItem.isSelected === true
+            ? 'bg-secondary-light'
+            : 'bg-transparent'
+        } z-10`}
+      >
         <Box
           height="h-3"
           background="bg-white"
-          classes={`${isRounded === true ? 'visible' : 'invisible'} corner-top z-10 rounded-br-lg`}
+          classes={`${
+            activeItem.currentItem === slug && activeItem.isSelected === true
+              ? 'visible'
+              : 'invisible'
+          } corner-top z-10 rounded-br-lg`}
         />
         <div className={`sidebar-item__content z-10 p-2`}>
           {icon}
@@ -28,7 +40,9 @@ const SidebarItem = ({ icon, slug, onClick }) => {
           height="h-3"
           background="bg-white"
           classes={`${
-            isRounded === true ? 'visible' : 'invisible'
+            activeItem.currentItem === slug && activeItem.isSelected === true
+              ? 'visible'
+              : 'invisible'
           } corner-bottom z-10 rounded-tr-lg`}
         />
       </div>
@@ -39,11 +53,6 @@ const SidebarItem = ({ icon, slug, onClick }) => {
 SidebarItem.propTypes = {
   icon: PropTypes.node.isRequired,
   slug: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-};
-
-SidebarItem.defaultProps = {
-  onClick: () => {},
 };
 
 export default SidebarItem;

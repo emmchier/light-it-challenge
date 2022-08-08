@@ -9,8 +9,11 @@ const MainContextProvider = ({ children }) => {
   });
 
   const [showMenu, setShowMenu] = useState(false);
-
   const handleShowMenu = () => setShowMenu(!showMenu);
+  const [activeItem, setActiveItem] = useState({
+    currentItem: '',
+    isSelected: false,
+  });
 
   //   useEffect(() => {
   //     getGlobalData().then(({ props }) => {
@@ -23,7 +26,9 @@ const MainContextProvider = ({ children }) => {
   //   console.log(data);
 
   return (
-    <MainContext.Provider value={{ data, showMenu, setShowMenu, handleShowMenu }}>
+    <MainContext.Provider
+      value={{ data, showMenu, setShowMenu, handleShowMenu, activeItem, setActiveItem }}
+    >
       {children}
     </MainContext.Provider>
   );

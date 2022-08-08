@@ -12,6 +12,7 @@ const Sidebar = ({ side, alignContent }) => (
           key={item.slug}
           icon={item.icon}
           slug={item.slug}
+          isActive={item.isActive}
           onClick={console.log('abrir sidebar')}
         />
       ))}

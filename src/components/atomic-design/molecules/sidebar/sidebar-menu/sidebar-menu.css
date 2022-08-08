@@ -8,14 +8,17 @@
     background-color: #f7f7f7;
     z-index: 1;
     padding-left: 15vh;
+    transition: 0.2s ease-in-out;
   }
 
   .sidebar-menu.opened {
     left: 0;
+    transition: 0.2s ease-in-out;
   }
 
   .sidebar-menu.closed {
     left: -100%;
+    transition: 0.2s ease-in-out;
   }
 
   .sidebar-menu__content {

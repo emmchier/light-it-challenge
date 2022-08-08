@@ -1,0 +1,10 @@
+@tailwind components;
+@layer components {
+  .main-actions {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 25px;
+    display: flex;
+  }
+}

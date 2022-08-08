@@ -1,0 +1,60 @@
+@tailwind components;
+@layer components {
+  .direction-buttons {
+    border-radius: 0.3rem;
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+  }
+
+  .direction-buttons__content {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .direction-buttons button {
+    border-radius: 0.2rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1px;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .direction-buttons button:hover {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .direction-buttons button svg {
+    height: 15px;
+    width: 15px;
+    margin: 3px;
+  }
+
+  .direction-top {
+    width: 60px;
+    top: 0;
+    position: absolute;
+  }
+  .direction-right {
+    position: absolute;
+    right: 0;
+    height: 60px;
+  }
+  .direction-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+  }
+  .direction-left {
+    left: 0;
+    position: absolute;
+    height: 60px;
+  }
+}

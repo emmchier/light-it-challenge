@@ -1,0 +1,35 @@
+@tailwind components;
+@layer components {
+  .resize-buttons {
+    border-radius: 0.3rem;
+    background-color: #ffffff;
+  }
+
+  .resize-buttons button {
+    height: 30px;
+    width: 30px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rounded-top {
+    border-top-left-radius: 0.3rem !important;
+    border-top-right-radius: 0.3rem !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  .rounded-bottom {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0.3rem !important;
+    border-bottom-right-radius: 0.3rem !important;
+  }
+
+  .resize-buttons button svg {
+    height: 15px;
+    width: 15px;
+  }
+}

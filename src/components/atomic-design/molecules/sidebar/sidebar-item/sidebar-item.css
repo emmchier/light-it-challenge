@@ -5,11 +5,19 @@
   }
 
   .sidebar-item__content {
-    @apply flex flex-col items-center px-1 relative;
+    @apply flex flex-col items-center z-50;
   }
 
   .sidebar-item p {
     @apply text-smXX leading-none;
+  }
+
+  .corner-top {
+    transform: translateY(-5px);
+  }
+
+  .corner-bottom {
+    transform: translateY(5px);
   }
 
   .sidebar-item svg {

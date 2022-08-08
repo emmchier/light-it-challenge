@@ -14,24 +14,24 @@ const SidebarItem = ({ icon, slug, onClick }) => {
 
   return (
     <li onClick={handleClick} className="sidebar-item">
-      <Box
-        height="h-3"
-        background="bg-red-400"
-        classes={`${isRounded === true ? 'visible' : 'invisible'} corner-top z-10 rounded-br-lg`}
-      />
-      <div
-        className={`sidebar-item__content ${
-          isRounded === true ? 'bg-secondary-main' : 'bg-transparent'
-        } corner-bottom z-10 rounded-tr-lg`}
-      >
-        {icon}
-        <Text cap="capitalize">{slug}</Text>
+      <div className={`${isRounded === true ? 'bg-secondary-main' : 'bg-transparent'} z-10`}>
+        <Box
+          height="h-3"
+          background="bg-white"
+          classes={`${isRounded === true ? 'visible' : 'invisible'} corner-top z-10 rounded-br-lg`}
+        />
+        <div className={`sidebar-item__content z-10 p-2`}>
+          {icon}
+          <Text cap="capitalize">{slug}</Text>
+        </div>
+        <Box
+          height="h-3"
+          background="bg-white"
+          classes={`${
+            isRounded === true ? 'visible' : 'invisible'
+          } corner-bottom z-10 rounded-tr-lg`}
+        />
       </div>
-      <Box
-        height="h-3"
-        background="bg-blue-400"
-        classes={`${isRounded === true ? 'visible' : 'invisible'} corner-bottom z-10 rounded-tr-lg`}
-      />
     </li>
   );
 };

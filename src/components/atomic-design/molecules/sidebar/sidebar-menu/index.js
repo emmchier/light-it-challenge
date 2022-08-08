@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { MainContext } from '../../../../../context';
 import Button from '../../../atoms/button';
 import Icon from '../../../atoms/icon';
 
-const SidebarMenu = ({ showMenu = false, setShowMenu }) => {
+const SidebarMenu = () => {
+  const { showMenu, setShowMenu } = useContext(MainContext);
+
   return (
     <div className={`sidebar-menu ${showMenu === false ? 'closed' : 'opened'}`}>
       <div className="sidebar-menu__content">

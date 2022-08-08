@@ -7,15 +7,11 @@ import SidebarMenu from '../components/atomic-design/molecules/sidebar/sidebar-m
 import HomePage from '../pages/home';
 
 const AppRouter = () => {
-  // const [showMenu, setShowMenu] = useState(false);
-
-  // const handleShowMenu = () => setShowMenu(!showMenu);
-
   return (
     <BrowserRouter>
       <Navbar />
       <Sidebar />
-      <SidebarMenu /* shoMenu={showMenu} setShowMenu={setShowMenu}*/ />
+      <SidebarMenu />
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>

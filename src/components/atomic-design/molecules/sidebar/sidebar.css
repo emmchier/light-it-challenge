@@ -3,5 +3,7 @@
   .sidebar {
     @apply overflow-hidden bg-white flex items-center w-fit;
     height: 100vh;
+    position: relative;
+    z-index: 2;
   }
 }

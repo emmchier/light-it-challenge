@@ -4,11 +4,13 @@ import Button from '../../../atoms/button';
 import Icon from '../../../atoms/icon';
 
 const SidebarMenu = () => {
-  const { showMenu, setShowMenu, activeItem, setActiveItem } = useContext(MainContext);
+  const { showMenu, setShowMenu, activeItem, setActiveItem, setShowActions } =
+    useContext(MainContext);
 
   const handleCloseMenu = () => {
     setShowMenu(false);
     setActiveItem({ ...activeItem, isSelected: false });
+    setShowActions(false);
   };
 
   return (

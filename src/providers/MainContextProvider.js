@@ -9,6 +9,7 @@ const MainContextProvider = ({ children }) => {
   });
 
   const [showMenu, setShowMenu] = useState(false);
+  const [showActions, setShowActions] = useState(false);
   const handleShowMenu = () => setShowMenu(!showMenu);
   const [activeItem, setActiveItem] = useState({
     currentItem: '',
@@ -27,7 +28,16 @@ const MainContextProvider = ({ children }) => {
 
   return (
     <MainContext.Provider
-      value={{ data, showMenu, setShowMenu, handleShowMenu, activeItem, setActiveItem }}
+      value={{
+        data,
+        showMenu,
+        setShowMenu,
+        handleShowMenu,
+        activeItem,
+        setActiveItem,
+        showActions,
+        setShowActions,
+      }}
     >
       {children}
     </MainContext.Provider>

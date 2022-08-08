@@ -6,12 +6,13 @@ import { MainContext } from '../../../../../context';
 import Text from '../../../atoms/text';
 import Box from '../../../atoms/box';
 
-const SidebarItem = ({ icon, slug, isActive }) => {
-  const { activeItem, setActiveItem, setShowMenu } = useContext(MainContext);
+const SidebarItem = ({ icon, slug }) => {
+  const { activeItem, setActiveItem, setShowMenu, setShowActions } = useContext(MainContext);
 
   const handleClick = () => {
     setShowMenu(true);
     setActiveItem({ currentItem: slug, isSelected: true });
+    setShowActions(true);
   };
 
   return (

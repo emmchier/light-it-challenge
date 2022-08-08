@@ -1,5 +1,6 @@
 @import './globalStyles.css';
 @import './utilities.css';
+@import '../pages/home/home.css';
 @import '../components/atomic-design/atoms/button/button.css';
 @import '../components/atomic-design/atoms/heading/heading.css';
 @import '../components/atomic-design/atoms/text/text.css';

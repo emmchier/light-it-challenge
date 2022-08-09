@@ -40,12 +40,12 @@
   }
 
   .skew-top {
-    @apply top-0 h-8;
+    @apply top-0 h-12;
     transform: skewY(35deg) translateY(2px);
   }
 
   .skew-bottom {
-    @apply bottom-0 h-8;
+    @apply bottom-0 h-12;
     transform: skewY(-35deg) translateY(-2px);
   }
 

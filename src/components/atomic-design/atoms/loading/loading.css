@@ -6,10 +6,10 @@
   }
 
   .loading p {
-    @apply mt-28;
+    @apply mt-12;
   }
 
   .loading svg {
-    @apply w-48 h-48;
+    @apply w-16 h-16;
   }
 }

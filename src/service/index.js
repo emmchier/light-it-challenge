@@ -21,7 +21,7 @@ export const getOvertures = async () => {
     const data = await result.json();
     return data;
   } catch (error) {
-    console.log('error al traer equipamiento', error);
+    console.log('error al traer aberturas', error);
   }
 };
 
@@ -31,6 +31,6 @@ export const getEndings = async () => {
     const data = await result.json();
     return data;
   } catch (error) {
-    console.log('error al traer equipamiento', error);
+    console.log('error al traer terminaciones', error);
   }
 };

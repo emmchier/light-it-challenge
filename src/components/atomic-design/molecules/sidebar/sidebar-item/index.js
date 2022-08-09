@@ -1,17 +1,31 @@
 import PropTypes from 'prop-types';
 
-import React, { useContext, useEffect, useState } from 'react';
-import { MainContext } from '../../../../../context';
+import React, { useContext } from 'react';
+import { ApiContext, MainContext } from '../../../../../context';
 
 import Text from '../../../atoms/text';
 import Box from '../../../atoms/box';
 
 const SidebarItem = ({ icon, slug }) => {
   const { activeItem, setActiveItem, setShowMenu, setShowActions } = useContext(MainContext);
+  const { equipment, overtures, endings } = useContext(ApiContext);
+
+  const filterMenuList = (slug) => {
+    switch (slug) {
+      case 'equipamiento':
+        return equipment;
+      case 'aberturas':
+        return overtures;
+      case 'terminaciones':
+        return endings;
+      default:
+        return [];
+    }
+  };
 
   const handleClick = () => {
     setShowMenu(true);
-    setActiveItem({ currentItem: slug, isSelected: true });
+    setActiveItem({ title: slug, items: filterMenuList(slug), isSelected: true });
     setShowActions(true);
   };
 

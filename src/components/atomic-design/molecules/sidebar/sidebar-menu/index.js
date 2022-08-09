@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { MainContext } from '../../../../../context';
 import Button from '../../../atoms/button';
 import Icon from '../../../atoms/icon';
+import SidebarMenuOptions from '../sidebar-menu-options';
 
 const SidebarMenu = () => {
   const { showMenu, setShowMenu, activeItem, setActiveItem, setShowActions } =
@@ -13,10 +14,12 @@ const SidebarMenu = () => {
     setShowActions(false);
   };
 
+  console.log(activeItem);
+
   return (
     <div className={`sidebar-menu ${showMenu === false ? 'closed' : 'opened'}`}>
       <div className="sidebar-menu__content">
-        Hola que tal
+        <SidebarMenuOptions activeItem={activeItem} />
         <Button onClick={handleCloseMenu} ariaLabel="cerrar menú lateral">
           <span className="skew-effect skew-top"></span>
           <Icon icon="chevron" color="#707070" ariaLabel="icono flecha izquierda" />

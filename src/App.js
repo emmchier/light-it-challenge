@@ -1,10 +1,14 @@
-import MainContextProvider from './providers/MainContextProvider';
 import AppRouter from './routers/AppRouter';
 
+import ApiContextProvider from './providers/ApiContextProvider';
+import MainContextProvider from './providers/MainContextProvider';
+
 const App = () => (
-  <MainContextProvider>
-    <AppRouter />
-  </MainContextProvider>
+  <ApiContextProvider>
+    <MainContextProvider>
+      <AppRouter />
+    </MainContextProvider>
+  </ApiContextProvider>
 );
 
 export default App;

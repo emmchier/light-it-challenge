@@ -8,13 +8,7 @@ const Sidebar = ({ side, alignContent }) => (
   <div className={`sidebar ${alignContent} ${side}`}>
     <ul className="sidebar__content">
       {sidebarList?.map((item) => (
-        <SidebarItem
-          key={item.slug}
-          icon={item.icon}
-          slug={item.slug}
-          isActive={item.isActive}
-          onClick={console.log('abrir sidebar')}
-        />
+        <SidebarItem key={item.slug} icon={item.icon} slug={item.slug} isActive={item.isActive} />
       ))}
     </ul>
   </div>

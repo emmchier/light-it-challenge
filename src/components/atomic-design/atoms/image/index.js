@@ -2,7 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Image = ({ src, alt, width, height }) => (
-  <img src={src} width={width} height={height} alt={alt} />
+  <img
+    src={src}
+    width={width}
+    height={height}
+    alt={alt}
+    onError={({ currentTarget }) => {
+      currentTarget.onerror = null;
+      currentTarget.src = '/assets/default-img-bg.svg';
+    }}
+  />
 );
 
 Image.propTypes = {

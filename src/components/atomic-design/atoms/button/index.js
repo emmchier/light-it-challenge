@@ -36,13 +36,13 @@ const Button = ({
     >
       {iconLeft && (
         <span className="rotate-70 mr-2 scale-50">
-          <Icon icon="chevron" />
+          <Icon icon="chevron" ariaLabel="icono flecha a la izquierda" />
         </span>
       )}
       {children}
       {iconRight && (
         <span className="rotate-180 ml-2 scale-50">
-          <Icon icon="chevron" />
+          <Icon icon="chevron" ariaLabel="icono flecha a la derecha" />
         </span>
       )}
     </button>

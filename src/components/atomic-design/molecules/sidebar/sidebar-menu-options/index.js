@@ -3,13 +3,15 @@ import { MainContext } from '../../../../../context';
 import Button from '../../../atoms/button';
 
 import Heading from '../../../atoms/heading';
+import SidebarCurrentOption from '../sidebar-current-option';
 
-const SidebarMenuOptions = ({ slug, menuOptionsList }) => {
-  const { setCurrentOption, setShowCurrentOption } = useContext(MainContext);
+const SidebarMenuOptions = ({ activeItem }) => {
+  const { currentOption, setCurrentOption, showCurrentOption, setShowCurrentOption } =
+    useContext(MainContext);
 
   const handleCurrentOption = (item) => {
     setCurrentOption({
-      title: slug,
+      title: activeItem.title,
       name: item.name,
       items: item.items,
     });
@@ -17,20 +19,32 @@ const SidebarMenuOptions = ({ slug, menuOptionsList }) => {
   };
 
   return (
-    <div className="sidebar-menu-item">
-      <Heading variant="h3" cap="capitalize">
-        {slug}
-      </Heading>
-      <ul className="option-list">
-        {menuOptionsList?.map((item) => (
-          <li key={item.name} className="option-item">
-            <Button onClick={() => handleCurrentOption(item)} ariaLabel={`ir a ${item.name}`}>
-              {item.name}
-            </Button>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      {showCurrentOption === true ? (
+        <SidebarCurrentOption option={currentOption} setShowCurrentOption={setShowCurrentOption} />
+      ) : (
+        <div className="sidebar-menu-item">
+          <div className="sidebar-menu-item__list">
+            <Heading variant="h3" cap="capitalize">
+              {activeItem.title}
+            </Heading>
+            <ul className="option-list">
+              {activeItem.items?.map((item) => (
+                <li key={item.name} className="option-item">
+                  <Button
+                    onClick={() => handleCurrentOption(item)}
+                    iconRight={true}
+                    ariaLabel={`ir a ${item.name}`}
+                  >
+                    {item.name}
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

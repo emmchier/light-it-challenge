@@ -1,6 +1,30 @@
 @tailwind components;
 @layer components {
-  .sidebar-menu-options button {
-    width: 100%;
+  .sidebar-menu-item {
+    padding: 20px !important;
+  }
+  .option-list {
+    width: 100% !important;
+  }
+
+  .option-item {
+    width: 100% !important;
+  }
+
+  .option-item button {
+    right: 0;
+    position: relative;
+    height: auto;
+    transform: 0;
+    background: #ffffff;
+    display: flex;
+    width: 100% !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem !important;
+  }
+
+  .option-item button:hover {
+    background: #e0e0e0;
   }
 }

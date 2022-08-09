@@ -25,7 +25,7 @@ const SidebarCurrentOption = ({ option, setShowCurrentOption }) => {
         {option.name}
       </Heading>
       {loading === false ? (
-        option.items.length < 0 ? (
+        option.items.length > 0 ? (
           <ul className="current-option__list">
             {option.items?.map((item) => (
               <CurrentOptionItem key={item.name} item={item} />

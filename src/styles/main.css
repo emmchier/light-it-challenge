@@ -8,10 +8,13 @@
 @import '../components/atomic-design/molecules/navbar/navbar.css';
 @import '../components/atomic-design/molecules/dropdown-button/dropdown-button.css';
 @import '../components/atomic-design/molecules/sidebar/sidebar.css';
+@import '../components/atomic-design/atoms/loading/loading.css';
+@import '../components/atomic-design/atoms/empty/empty.css';
 @import '../components/atomic-design/molecules/sidebar/sidebar-item/sidebar-item.css';
 @import '../components/atomic-design/molecules/sidebar/sidebar-menu/sidebar-menu.css';
 @import '../components/atomic-design/molecules/sidebar/sidebar-menu-options/sidebar-menu-options.css';
 @import '../components/atomic-design/molecules/sidebar/sidebar-current-option/sidebar-current-option.css';
+@import '../components/atomic-design/molecules/sidebar/sidebar-current-option/current-option-item/current-option-item.css';
 @import '../components/atomic-design/organisms/main-actions/main-actions.css';
 @import '../components/atomic-design/organisms/main-actions/resize-buttons/resize-buttons.css';
 @import '../components/atomic-design/organisms/main-actions/direction-buttons/direction-buttons.css';

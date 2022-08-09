@@ -6,7 +6,9 @@ import {
   AddIcon,
   ArrowIcon,
   ChevronIcon,
+  EmptyIcon,
   EquipamientoIcon,
+  SpinnerIcon,
   SustractIcon,
   TerminacionesIcon,
 } from '../../../ui/svg';
@@ -28,6 +30,10 @@ const Icon = ({ icon, color, rotate, ariaLabel }) => {
         return <SustractIcon color={color} rotate={rotate} ariaLabel={ariaLabel} />;
       case 'terminaciones':
         return <TerminacionesIcon color={color} rotate={rotate} ariaLabel={ariaLabel} />;
+      case 'empty':
+        return <EmptyIcon rotate={rotate} ariaLabel={ariaLabel} />;
+      case 'spinner':
+        return <SpinnerIcon rotate={rotate} ariaLabel={ariaLabel} />;
       default:
         break;
     }

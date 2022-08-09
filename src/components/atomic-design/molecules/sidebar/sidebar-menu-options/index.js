@@ -1,13 +1,17 @@
 import React, { useContext } from 'react';
-import { MainContext } from '../../../../../context';
+import { ApiContext, MainContext } from '../../../../../context';
 import Button from '../../../atoms/button';
+import Empty from '../../../atoms/empty';
 
 import Heading from '../../../atoms/heading';
+import Loading from '../../../atoms/loading';
 import SidebarCurrentOption from '../sidebar-current-option';
 
 const SidebarMenuOptions = ({ activeItem }) => {
   const { currentOption, setCurrentOption, showCurrentOption, setShowCurrentOption } =
     useContext(MainContext);
+
+  const { loading } = useContext(ApiContext);
 
   const handleCurrentOption = (item) => {
     setCurrentOption({
@@ -28,19 +32,27 @@ const SidebarMenuOptions = ({ activeItem }) => {
             <Heading variant="h4" cap="capitalize" weight="font-bold">
               {activeItem.title}
             </Heading>
-            <ul className="option-list mt-2">
-              {activeItem.items?.map((item) => (
-                <li key={item.name} className="option-item">
-                  <Button
-                    onClick={() => handleCurrentOption(item)}
-                    iconRight={true}
-                    ariaLabel={`ir a ${item.name}`}
-                  >
-                    {item.name}
-                  </Button>
-                </li>
-              ))}
-            </ul>
+            {loading === false ? (
+              activeItem.items.length > 0 ? (
+                <ul className="option-list mt-2">
+                  {activeItem.items?.map((item) => (
+                    <li key={item.name} className="option-item">
+                      <Button
+                        onClick={() => handleCurrentOption(item)}
+                        iconRight={true}
+                        ariaLabel={`ir a ${item.name}`}
+                      >
+                        {item.name}
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <Empty text={activeItem.title} />
+              )
+            ) : (
+              <Loading />
+            )}
           </div>
         </div>
       )}

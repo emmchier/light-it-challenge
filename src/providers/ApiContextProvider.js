@@ -6,8 +6,10 @@ const ApiContextProvider = ({ children }) => {
   const [equipment, setEquipment] = useState([]);
   const [overtures, setOvertures] = useState([]);
   const [endings, setEndings] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     Promise.all([
       getEquipment().then((res) => {
         setEquipment(res);
@@ -18,9 +20,11 @@ const ApiContextProvider = ({ children }) => {
       getEndings().then((res) => {
         setEndings(res);
       }),
-    ]).catch(function (error) {
-      console.log(error);
-    });
+    ])
+      .catch(function (error) {
+        console.log(error);
+      })
+      .finally(() => setLoading(false));
   }, []);
 
   console.log(equipment);
@@ -36,6 +40,8 @@ const ApiContextProvider = ({ children }) => {
         setOvertures,
         endings,
         setEndings,
+        loading,
+        setLoading,
       }}
     >
       {children}

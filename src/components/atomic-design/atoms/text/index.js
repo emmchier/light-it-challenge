@@ -15,7 +15,7 @@ Text.propTypes = {
 Text.defaultProps = {
   color: 'text-primary-main',
   weight: 'font-normal',
-  cap: 'lowercase',
+  cap: 'normal-case',
 };
 
 export default Text;

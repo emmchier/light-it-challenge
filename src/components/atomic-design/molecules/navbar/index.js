@@ -13,7 +13,7 @@ const Navbar = () => (
       <Link to="/">
         <Image src={Brand} alt="logo de Light-It" onError={`/assets/brand-logo.svg` || Brand} />
       </Link>
-      <DropdownButton options={dropdownList} onChange={(e) => console.log(e.target.value)} />
+      <DropdownButton options={dropdownList} />
     </Container>
   </header>
 );

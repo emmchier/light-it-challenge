@@ -33,7 +33,7 @@ const SidebarItem = ({ icon, slug }) => {
     <li onClick={handleClick} className="sidebar-item">
       <div
         className={`${
-          activeItem.currentItem === slug && activeItem.isSelected === true
+          activeItem.title === slug && activeItem.isSelected === true
             ? 'bg-secondary-light'
             : 'bg-transparent'
         } z-10`}
@@ -42,9 +42,7 @@ const SidebarItem = ({ icon, slug }) => {
           height="h-3"
           background="bg-white"
           classes={`${
-            activeItem.currentItem === slug && activeItem.isSelected === true
-              ? 'visible'
-              : 'invisible'
+            activeItem.title === slug && activeItem.isSelected === true ? 'visible' : 'invisible'
           } corner-top z-10 rounded-br-lg`}
         />
         <div className={`sidebar-item__content z-10 p-2`}>
@@ -55,9 +53,7 @@ const SidebarItem = ({ icon, slug }) => {
           height="h-3"
           background="bg-white"
           classes={`${
-            activeItem.currentItem === slug && activeItem.isSelected === true
-              ? 'visible'
-              : 'invisible'
+            activeItem.title === slug && activeItem.isSelected === true ? 'visible' : 'invisible'
           } corner-bottom z-10 rounded-tr-lg`}
         />
       </div>

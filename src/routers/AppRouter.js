@@ -10,13 +10,15 @@ import HomePage from '../pages/home';
 const AppRouter = () => {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Sidebar />
-      <SidebarMenu />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-      <MainActions />
+      <main>
+        <Navbar />
+        <Sidebar />
+        <SidebarMenu />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+        <MainActions />
+      </main>
     </BrowserRouter>
   );
 };

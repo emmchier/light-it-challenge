@@ -14,8 +14,6 @@ const SidebarMenu = () => {
     setShowActions(false);
   };
 
-  console.log(activeItem);
-
   return (
     <div className={`sidebar-menu ${showMenu === false ? 'closed' : 'opened'}`}>
       <div className="sidebar-menu__content">

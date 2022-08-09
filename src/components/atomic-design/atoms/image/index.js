@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Image = ({ src, alt, width, height }) => (
+const Image = ({ src, alt, width, height, onError }) => (
   <img
     src={src}
     width={width}
@@ -9,7 +9,7 @@ const Image = ({ src, alt, width, height }) => (
     alt={alt}
     onError={({ currentTarget }) => {
       currentTarget.onerror = null;
-      currentTarget.src = '/assets/default-img-bg.svg';
+      currentTarget.src = onError;
     }}
   />
 );
@@ -26,6 +26,7 @@ Image.defaultProps = {
   width: 'w-auto',
   height: 'h-auto',
   alt: '',
+  onError: '',
 };
 
 export default Image;

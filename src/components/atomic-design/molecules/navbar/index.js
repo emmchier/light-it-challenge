@@ -5,11 +5,14 @@ import Container from '../../atoms/container';
 import Image from '../../atoms/image';
 import DropdownButton from '../dropdown-button';
 import Brand from '../../../../assets/brand-logo.svg';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => (
   <header className="navbar">
     <Container display="flex" alignItems="items-center" justifyContent="justify-between">
-      <Image src={Brand} alt="logo de Light-It" />
+      <Link to="/">
+        <Image src={Brand} alt="logo de Light-It" onError={`/assets/brand-logo.svg` || Brand} />
+      </Link>
       <DropdownButton options={dropdownList} onChange={(e) => console.log(e.target.value)} />
     </Container>
   </header>

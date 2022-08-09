@@ -1,3 +1,3 @@
 # Getting Started
 
-See the deployed project in [VERCEL](https://github.com/facebook/create-react-app).
+See the deployed project in [VERCEL](https://light-it-challenge.vercel.app/).

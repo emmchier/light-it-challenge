@@ -23,7 +23,7 @@
 
   @media screen(sm) {
     ::-webkit-scrollbar {
-      display: none;
+      @apply hidden;
     }
   }
 }

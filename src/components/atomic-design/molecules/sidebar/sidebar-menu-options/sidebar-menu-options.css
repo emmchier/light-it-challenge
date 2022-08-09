@@ -1,35 +1,27 @@
 @tailwind components;
 @layer components {
   .sidebar-menu-item {
+    @apply w-full pt-20;
     height: 100vh;
-    width: 100%;
-    padding-top: 80px;
   }
   .option-list {
     height: 100vh;
   }
 
   .option-item {
-    position: relative;
+    @apply relative;
     margin-bottom: 1rem !important;
   }
 
   .option-item button {
-    right: 0;
-    position: relative;
-    height: auto;
-    transform: 0;
-    background: #ffffff;
-    display: flex;
+    @apply right-0 relative h-auto bg-white flex items-center justify-between;
     width: 100% !important;
-    align-items: center;
-    justify-content: space-between;
     padding: 0.6rem 1rem !important;
     border-radius: 0.6rem !important;
     transform: translateX(0) !important;
   }
 
   .option-item button:hover {
-    background: #e0e0e0;
+    @apply bg-secondary-dark;
   }
 }

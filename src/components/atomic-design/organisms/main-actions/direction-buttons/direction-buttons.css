@@ -1,12 +1,7 @@
 @tailwind components;
 @layer components {
   .direction-buttons {
-    border-radius: 0.3rem;
-    background-color: #ffffff;
-    overflow: hidden;
-    width: 60px;
-    height: 60px;
-    margin-left: 20px;
+    @apply rounded-md bg-white overflow-hidden w-16 h-16 ml-6;
   }
 
   .direction-buttons__content {
@@ -16,45 +11,32 @@
   }
 
   .direction-buttons button {
-    border-radius: 0.2rem;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1px;
-    position: absolute;
-    z-index: 0;
+    @apply rounded-md p-0 flex items-center justify-center m-0.5 absolute z-0;
   }
 
   .direction-buttons button:hover {
-    position: absolute;
+    @apply absolute;
     z-index: 2;
   }
 
   .direction-buttons button svg {
-    height: 15px;
-    width: 15px;
-    margin: 3px;
+    @apply h-4 w-4 m-1;
   }
 
   .direction-top {
+    @apply top-0 absolute;
     width: 60px;
-    top: 0;
-    position: absolute;
   }
   .direction-right {
-    position: absolute;
-    right: 0;
+    @apply right-0 absolute;
     height: 60px;
   }
   .direction-bottom {
-    position: absolute;
-    bottom: 0;
+    @apply bottom-0 absolute;
     width: 60px;
   }
   .direction-left {
-    left: 0;
-    position: absolute;
+    @apply left-0 absolute;
     height: 60px;
   }
 }

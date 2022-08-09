@@ -1,18 +1,16 @@
 @tailwind components;
 @layer components {
   .sidebar-menu {
+    @apply absolute bg-secondary-light top-0;
     height: 100vh;
-    position: absolute;
-    top: 0;
     width: 50%;
-    background-color: #f7f7f7;
     z-index: 1;
     padding-left: 15vh;
     transition: 0.2s ease-in-out;
   }
 
   .sidebar-menu.opened {
-    left: 0;
+    @apply left-0;
     transition: 0.2s ease-in-out;
   }
 
@@ -22,58 +20,37 @@
   }
 
   .sidebar-menu__content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    @apply flex items-center justify-start relative p-6 bg-secondary-light;
     width: 100% !important;
     height: 100vh;
-    position: relative;
-    padding: 1.5rem;
-    background-color: #f7f7f7;
   }
 
   .sidebar-menu__content button {
-    position: absolute;
-    right: 0;
-    height: 100px;
-    padding: 0 0 !important;
+    @apply absolute right-0 flex w-5 bg-transparent items-center justify-center h-20;
+    padding: 0 !important;
     transform: translateX(21px);
-    background: transparent;
-    display: flex;
-    width: 25px;
-    align-items: center;
-    justify-content: center;
     border-radius: none !important;
   }
   .sidebar-menu__content button:hover {
-    background: transparent;
+    @apply bg-transparent;
   }
 
   .skew-effect {
-    position: absolute;
-    width: 25px;
-    background: blue;
-    border-radius: 5px;
-    background-color: #f7f7f7;
+    @apply bg-secondary-light absolute rounded-md w-6;
   }
 
   .skew-top {
-    top: 0;
-    height: 60px;
+    @apply top-0 h-8;
     transform: skewY(35deg) translateY(2px);
   }
 
   .skew-bottom {
-    bottom: 0;
-    height: 60px;
+    @apply bottom-0 h-8;
     transform: skewY(-35deg) translateY(-2px);
   }
 
-  /* skewY(35deg) */
-
   .sidebar-menu__content button svg {
-    height: 15px;
-    position: relative;
+    @apply h-3 relative;
     z-index: 9;
   }
 }

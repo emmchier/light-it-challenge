@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
+
 import { ApiContext } from '../../../../../context';
+
 import Button from '../../../atoms/button';
 import Empty from '../../../atoms/empty';
 import Heading from '../../../atoms/heading';
@@ -10,7 +12,7 @@ const SidebarCurrentOption = ({ option, setShowCurrentOption }) => {
   const { loading } = useContext(ApiContext);
 
   return (
-    <div className="current-option">
+    <div className="current-option fade-in">
       <Button
         onClick={() => setShowCurrentOption(false)}
         iconLeft={true}

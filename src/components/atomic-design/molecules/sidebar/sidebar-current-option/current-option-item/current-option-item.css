@@ -1,26 +1,18 @@
 @tailwind components;
 @layer components {
   .current-option__item {
-    margin: 0;
+    @apply m-0 overflow-hidden flex items-center justify-center flex-col;
     width: 33.3% !important;
     max-width: 33.3% !important;
     max-height: 230px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
   }
 
   .current-option__item img {
-    width: 100%;
-    height: 100%;
+    @apply w-full h-full object-cover;
     min-height: 180px;
-    object-fit: cover;
   }
 
   .current-option__item p {
-    color: #707070;
-    font-size: 15px;
+    @apply text-primary-main text-base mt-2;
   }
 }

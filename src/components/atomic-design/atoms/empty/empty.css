@@ -1,12 +1,8 @@
 @tailwind components;
 @layer components {
   .empty {
-    width: 100%;
+    @apply w-full flex items-center justify-center flex-col;
     height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
   }
 
   .empty svg {

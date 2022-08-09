@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <section className="home-page fade-in">
       {showActions === true && (
-        <div className="page-actions absolute flex right-0 mr-5">
+        <div className="page-actions absolute flex right-0 mr-5 fade-in">
           <Button onClick={() => console.log('Fijar')} ariaLabel="Fijar">
             Fijar
           </Button>

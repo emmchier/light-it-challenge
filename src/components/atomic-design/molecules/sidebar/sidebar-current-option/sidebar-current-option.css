@@ -1,33 +1,27 @@
 @tailwind components;
 @layer components {
   .current-option {
+    @apply pt-24;
     width: 100% !important;
     height: 100vh;
-    padding-top: 100px;
   }
 
   .current-option h4 {
+    @apply my-5;
     color: #707070 !important;
-    margin: 15px 0;
   }
 
   .current-option__list {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    @apply flex items-center justify-start;
     gap: calc(20px);
   }
 
   .current-option button {
+    @apply h-auto relative right-0 flex;
     text-transform: capitalize;
-    right: 0;
-    position: relative;
-    height: auto;
-    transform: 0;
     background-color: transparent !important;
     padding: 0 !important;
     transform: translateX(0);
-    display: flex;
     width: 100% !important;
     align-items: center !important;
     justify-content: flex-start !important;
@@ -39,6 +33,6 @@
   }
 
   .current-option button:hover {
-    background-color: #e0e0e0;
+    @apply bg-secondary-light;
   }
 }

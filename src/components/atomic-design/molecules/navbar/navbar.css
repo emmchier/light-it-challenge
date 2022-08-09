@@ -5,7 +5,6 @@
   }
 
   .navbar img {
-    height: 80px;
-    @apply lg:w-auto py-4;
+    @apply w-24 lg:w-32 py-4;
   }
 }

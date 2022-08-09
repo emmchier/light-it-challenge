@@ -35,7 +35,7 @@ Heading.defaultProps = {
   variant: 'h3',
   color: 'text-primary-main',
   weight: 'font-medium',
-  cap: 'capitalize',
+  cap: 'normal-case',
 };
 
 export default Heading;

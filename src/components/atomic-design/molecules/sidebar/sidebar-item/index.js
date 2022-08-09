@@ -32,7 +32,7 @@ const SidebarItem = ({ icon, slug }) => {
   };
 
   return (
-    <li onClick={handleClick} className="sidebar-item">
+    <li onClick={handleClick} className="sidebar-item fade-in">
       <div
         className={`${
           activeItem.title === slug && activeItem.isSelected === true

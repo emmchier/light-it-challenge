@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
+
 import { ApiContext, MainContext } from '../../../../../context';
+
 import Button from '../../../atoms/button';
 import Empty from '../../../atoms/empty';
 
@@ -27,7 +29,7 @@ const SidebarMenuOptions = ({ activeItem }) => {
       {showCurrentOption === true ? (
         <SidebarCurrentOption option={currentOption} setShowCurrentOption={setShowCurrentOption} />
       ) : (
-        <div className="sidebar-menu-item mt-10">
+        <div className="sidebar-menu-item mt-10 fade-in">
           <div className="sidebar-menu-item__list">
             <Heading variant="h4" cap="capitalize" weight="font-bold">
               {activeItem.title}

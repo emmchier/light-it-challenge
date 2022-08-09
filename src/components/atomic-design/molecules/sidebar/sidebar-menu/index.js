@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+
 import { MainContext } from '../../../../../context';
 import Button from '../../../atoms/button';
 import Icon from '../../../atoms/icon';
@@ -15,7 +16,7 @@ const SidebarMenu = () => {
   };
 
   return (
-    <div className={`sidebar-menu ${showMenu === false ? 'closed' : 'opened'}`}>
+    <div className={`sidebar-menu fade-in ${showMenu === false ? 'closed' : 'opened'}`}>
       <div className="sidebar-menu__content">
         <SidebarMenuOptions activeItem={activeItem} />
         <Button onClick={handleCloseMenu} ariaLabel="cerrar menú lateral">

@@ -23,12 +23,12 @@ const SidebarMenuOptions = ({ activeItem }) => {
       {showCurrentOption === true ? (
         <SidebarCurrentOption option={currentOption} setShowCurrentOption={setShowCurrentOption} />
       ) : (
-        <div className="sidebar-menu-item">
+        <div className="sidebar-menu-item mt-10">
           <div className="sidebar-menu-item__list">
-            <Heading variant="h3" cap="capitalize">
+            <Heading variant="h4" cap="capitalize" weight="font-bold">
               {activeItem.title}
             </Heading>
-            <ul className="option-list">
+            <ul className="option-list mt-2">
               {activeItem.items?.map((item) => (
                 <li key={item.name} className="option-item">
                   <Button

@@ -7,7 +7,8 @@ import Text from '../../../atoms/text';
 import Box from '../../../atoms/box';
 
 const SidebarItem = ({ icon, slug }) => {
-  const { activeItem, setActiveItem, setShowMenu, setShowActions } = useContext(MainContext);
+  const { activeItem, setActiveItem, setShowMenu, setShowActions, setShowCurrentOption } =
+    useContext(MainContext);
   const { equipment, overtures, endings } = useContext(ApiContext);
 
   const filterMenuList = (slug) => {
@@ -27,6 +28,7 @@ const SidebarItem = ({ icon, slug }) => {
     setShowMenu(true);
     setActiveItem({ title: slug, items: filterMenuList(slug), isSelected: true });
     setShowActions(true);
+    setShowCurrentOption(false);
   };
 
   return (

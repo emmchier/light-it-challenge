@@ -18,7 +18,7 @@ const SidebarCurrentOption = ({ option, setShowCurrentOption }) => {
       <Heading variant="h4" cap="capitalize">
         {option.name}
       </Heading>
-      <ul className="current-option__list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
+      <ul className="current-option__list">
         {option.items?.map((item) => (
           <CurrentOptionItem key={item.name} item={item} />
         ))}

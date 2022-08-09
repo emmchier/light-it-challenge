@@ -2,12 +2,9 @@
 @layer components {
   .current-option-item {
     margin: 0;
-    width: 33.3% !important;
     height: 30px !important;
   }
 
   .current-option__item img {
-    width: 33.3% !important;
-    height: 30px !important;
   }
 }

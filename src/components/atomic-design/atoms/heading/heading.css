@@ -1,21 +1,21 @@
 @tailwind components;
 @layer components {
   .heading.h1 {
-    @apply text-lgX leading-lgX md:text-lgXX md:leading-lgXX lg:text-lgXXX lg:leading-lgXXX;
+    @apply text-lgX md:text-lgXX lg:text-lgXXX;
   }
   .heading.h2 {
-    @apply text-lg leading-lg md:text-lgX md:leading-lgX lg:text-lgXX lg:leading-lgXX;
+    @apply text-lg md:text-lgX lg:text-lgXX;
   }
   .heading.h3 {
-    @apply text-md leading-md md:text-lg md:leading-lg lg:text-lgX lg:leading-lgX;
+    @apply text-md md:text-lg lg:text-lgX;
   }
   .heading.h4 {
-    @apply text-sm leading-sm md:text-md md:leading-md lg:text-lg lg:leading-lg;
+    @apply text-sm md:text-md lg:text-lg;
   }
   .heading.h5 {
-    @apply text-smX leading-smX md:text-sm md:leading-sm lg:text-md lg:leading-md;
+    @apply text-smX md:text-sm lg:text-md;
   }
   .heading.h6 {
-    @apply text-smXX leading-smXX md:text-smX md:leading-smX lg:text-sm lg:leading-sm;
+    @apply text-smXX md:text-smX lg:text-sm;
   }
 }

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+
 import PropTypes from 'prop-types';
 
 const DropdownButton = ({ options, inputName, name, label, placeHolder }) => {
-  const [value, setValue] = useState([]);
+  const [value, setValue] = useState('');
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -15,6 +16,7 @@ const DropdownButton = ({ options, inputName, name, label, placeHolder }) => {
         {label}
       </label>
       <div className="select-input">
+        <span className="line"></span>
         <div className="content">
           <label className="select-label" htmlFor={name}>
             {value}

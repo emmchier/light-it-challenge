@@ -27,10 +27,6 @@ const ApiContextProvider = ({ children }) => {
       .finally(() => setLoading(false));
   }, []);
 
-  console.log(equipment);
-  console.log(overtures);
-  console.log(endings);
-
   return (
     <ApiContext.Provider
       value={{
